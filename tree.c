@@ -80,7 +80,8 @@ char **createStringsArray(char buf[])
     char *ptrToWord = (char *)malloc((wordLength + 1) * sizeof(char));
 
     // append each letter in the word to its index in words array
-    for (int j = 0; j < wordLength; j++)
+    int j;
+    for (j = 0; j < wordLength; j++)
     {
       int nextCharInWord = buf[bufIndex];
       bufIndex++;
