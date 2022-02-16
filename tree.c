@@ -42,7 +42,8 @@ char **createStringsArray(char buf[])
   bufIndex = 0;
 
   // for each word, allocate enough space for the length of each string
-  for (int i = 0; i < numberOfWords; i++)
+  int i;
+  for (i = 0; i < numberOfWords; i++)
   {
     int wordLength = 0;
 
@@ -177,7 +178,8 @@ void printPreorder(node_t *node, FILE *file)
   // and use recursion to continue printing the nodes in preorder
   if (node != NULL)
   {
-    for (int i = 0; i < node->depth; i++)
+    int i;
+    for (i = 0; i < node->depth; i++)
     {
       fprintf(file, "  ");
     }
@@ -203,7 +205,8 @@ void printInorder(node_t *node, FILE *file)
   {
     printInorder(node->left, file);
 
-    for (int i = 0; i < node->depth; i++)
+    int i;
+    for (i = 0; i < node->depth; i++)
     {
       fprintf(file, "  ");
     }
@@ -230,7 +233,8 @@ void printPostorder(node_t *node, FILE *file)
     printPostorder(node->middle, file);
     printPostorder(node->right, file);
 
-    for (int i = 0; i < node->depth; i++)
+    int i;
+    for (i = 0; i < node->depth; i++)
     {
       fprintf(file, "  ");
     }
@@ -253,7 +257,8 @@ node_t *buildTree(char buf[])
   node_t *root = NULL; // pointer to the root node of the tree
 
   // for each word in words array, insert new node into tree
-  for (int i = 0;; i++)
+  int i;
+  for (i = 0;; i++)
   {
     if (words[i] == NULL)
     {
